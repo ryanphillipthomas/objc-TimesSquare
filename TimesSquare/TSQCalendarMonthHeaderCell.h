@@ -23,6 +23,8 @@
  */
 @property (nonatomic, strong) NSArray *headerLabels;
 
+@property (nonatomic, strong) UIColor *monthTextColor;
+
 
 /** Creates the header labels.
  

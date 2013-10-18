@@ -52,6 +52,11 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
     return _monthDateFormatter;
 }
 
+- (UIColor *)monthTextColor
+{
+    return _monthTextColor ? _monthTextColor : self.textColor;
+}
+
 - (void)createHeaderLabels;
 {
     NSDate *referenceDate = [NSDate dateWithTimeIntervalSinceReferenceDate:0];
@@ -86,7 +91,7 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
     
     self.headerLabels = headerLabels;
     self.textLabel.textAlignment = NSTextAlignmentCenter;
-    self.textLabel.textColor = self.textColor;
+    self.textLabel.textColor = self.monthTextColor;
     self.textLabel.shadowColor = [UIColor whiteColor];
     self.textLabel.shadowOffset = self.shadowOffset;
 }

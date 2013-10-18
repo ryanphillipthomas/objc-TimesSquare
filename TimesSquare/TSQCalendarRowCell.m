@@ -15,7 +15,6 @@
 
 @property (nonatomic, strong) NSArray *dayButtons;
 @property (nonatomic, strong) NSArray *notThisMonthButtons;
-@property (nonatomic, strong) UIButton *todayButton;
 @property (nonatomic, strong) UIButton *selectedButton;
 
 @property (nonatomic, assign) NSInteger indexOfTodayButton;

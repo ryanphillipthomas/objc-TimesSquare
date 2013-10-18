@@ -37,6 +37,9 @@
  */
 @property (nonatomic, weak, readonly) UIImage *todayBackgroundImage;
 
+- (void)createTodayButton;
+@property (nonatomic, strong) UIButton *todayButton;
+
 /** The background image for a day that's not this month.
  
  These are the trailing days from the previous month or the leading days from the following month. This can be `nil`.

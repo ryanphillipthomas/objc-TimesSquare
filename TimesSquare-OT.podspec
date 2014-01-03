@@ -12,4 +12,5 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '5.0'
   s.source_files = 'TimesSquare/*.{h,m}'
   s.requires_arc = true
+  s.header_dir = 'TimesSquare'
 end

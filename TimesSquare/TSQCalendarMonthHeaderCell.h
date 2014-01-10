@@ -23,6 +23,11 @@
  */
 @property (nonatomic, strong) NSArray *headerLabels;
 
+/** Day header label date formatter pattern.
+ 
+ "Su Mo Tu We Th Fr Sa" by default.
+ */
+@property (nonatomic, strong) NSString *headerLabelDateFormatterPattern;
 
 /** Creates the header labels.
  

@@ -40,6 +40,11 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
     return 65.0f;
 }
 
+- (NSString *)headerLabelDateFormatterPattern
+{
+	return @"cccccc"; // Tu
+}
+
 - (NSDateFormatter *)monthDateFormatter;
 {
     if (!_monthDateFormatter) {
@@ -61,7 +66,7 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
     
     NSDateFormatter *dayFormatter = [NSDateFormatter new];
     dayFormatter.calendar = self.calendar;
-    dayFormatter.dateFormat = @"cccccc";
+	dayFormatter.dateFormat = self.headerLabelDateFormatterPattern;
     
     for (NSUInteger index = 0; index < self.daysInWeek; index++) {
         [headerLabels addObject:@""];

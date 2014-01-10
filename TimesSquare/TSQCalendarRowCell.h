@@ -23,13 +23,35 @@
  */
 @property (nonatomic, weak, readonly) UIFont *dayOfMonthFont;
 
-
 /** The text color for a day that's "today".
 
 This is white by default.
 */
 @property (nonatomic, weak, readonly) UIColor *todayTextColor;
 
+/** The text shadow color for a day that's "today".
+ 
+ This is 75% of black by default.
+ */
+@property (nonatomic, weak, readonly) UIColor *todayTextShadowColor;
+
+/** The text color for a day that isn't in the current month
+ 
+ 50% of the TSQCalendarCell's textColor property by default.
+ */
+@property (nonatomic, weak, readonly) UIColor *notThisMonthTextColor;
+
+/** The text color for a day in the current month
+ 
+ 50% of the TSQCalendarCell's textColor property by default.
+ */
+@property (nonatomic, weak, readonly) UIColor *dayTextColor;
+
+/** The text shadow color for selected date
+ 
+ This is 75% of black by default.
+ */
+@property (nonatomic, weak, readonly) UIColor *selectedDateTextShadowColor;
 
 /** @name Images */
 

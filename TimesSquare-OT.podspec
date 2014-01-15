@@ -1,5 +1,5 @@
 
-version = '2.0.9'
+version = '2.0.10'
 
 Pod::Spec.new do |s|
   s.name         = "TimesSquare-OT"

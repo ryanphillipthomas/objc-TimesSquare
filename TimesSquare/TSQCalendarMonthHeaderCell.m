@@ -37,7 +37,7 @@
     return 65.0f;
 }
 
-- (NSString *)headerLabelDateFormatterPattern
+- (NSString *)headerDayLabelDateFormatterPattern
 {
 	return @"cccccc"; // Tu
 }
@@ -57,12 +57,12 @@
 	return NO;
 }
 
-- (UIColor *) headerLabelTextColor
+- (UIColor *) headerDayLabelTextColor
 {
 	return self.textColor;
 }
 
-- (UIColor *) headerTextColor
+- (UIColor *) headerDayTextColor
 {
 	return self.textColor;
 }
@@ -77,9 +77,19 @@
 	return 20.0f;
 }
 
-- (UIFont *) headerLabelFont
+- (UIFont *) headerDayLabelFont
 {
 	return [UIFont boldSystemFontOfSize:12.f];
+}
+
+- (UIFont *) headerMonthLabelFont
+{
+	return [UIFont systemFontOfSize:18.f];
+}
+
+- (UIColor *) headerMonthTextColor
+{
+	return self.textColor;
 }
 
 - (NSDateFormatter *)monthDateFormatter;
@@ -114,9 +124,9 @@
         UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
         label.textAlignment = NSTextAlignmentCenter;
         label.text = [dayFormatter stringFromDate:referenceDate];
-		label.font = self.headerLabelFont;
+		label.font = self.headerDayLabelFont;
 		label.backgroundColor = self.backgroundColor;
-        label.textColor = self.headerLabelTextColor;
+        label.textColor = self.headerDayLabelTextColor;
         label.shadowColor = [UIColor whiteColor];
         label.shadowOffset = self.shadowOffset;
         [label sizeToFit];
@@ -129,8 +139,9 @@
     self.headerLabels = headerLabels;
 	
 	if(!self.disableMonthHeaders) {
+		self.textLabel.font = self.headerMonthLabelFont;
 		self.textLabel.textAlignment = NSTextAlignmentCenter;
-		self.textLabel.textColor = self.headerTextColor;
+		self.textLabel.textColor = self.headerMonthTextColor;
 		self.textLabel.shadowColor = [UIColor whiteColor];
 		self.textLabel.shadowOffset = self.shadowOffset;
 	}
@@ -167,7 +178,7 @@
 {
     [super setBackgroundColor:backgroundColor];
     for (UILabel *label in self.headerLabels) {
-        label.backgroundColor = self.headerLabelBackgroundColor ? self.headerLabelBackgroundColor : backgroundColor;
+        label.backgroundColor = self.headerDayLabelBackgroundColor ? self.headerDayLabelBackgroundColor : backgroundColor;
     }
 }
 

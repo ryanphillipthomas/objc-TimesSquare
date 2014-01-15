@@ -33,25 +33,37 @@
  
  Defaults to the color passed into the -setBackgroundColor: method.
  */
-@property (nonatomic, strong) UIColor *headerLabelBackgroundColor;
+@property (nonatomic, strong) UIColor *headerDayLabelBackgroundColor;
 
 /** Month label text color.
  
  Defaults to main text color.
  */
-@property (nonatomic, strong) UIColor *headerTextColor;
+@property (nonatomic, strong) UIColor *headerDayTextColor;
 
 /** Day header label color.
  
  Defaults to the main text color.
  */
-@property (nonatomic, strong) UIColor *headerLabelTextColor;
+@property (nonatomic, strong) UIColor *headerDayLabelTextColor;
 
 /** Day header label font.
  
  Defaults bold system font of size 12.0f.
  */
-@property (nonatomic, strong) UIFont *headerLabelFont;
+@property (nonatomic, strong) UIFont *headerDayLabelFont;
+
+/** Month header label font.
+ 
+ Defaults to system font of size 18.0f.
+ */
+@property (nonatomic, strong) UIFont *headerMonthLabelFont;
+
+/** Month header label text color.
+ 
+ Defaults to main text color.
+ */
+@property (nonatomic, strong) UIColor *headerMonthTextColor;
 
 /** Day header label rect offset dx.
 

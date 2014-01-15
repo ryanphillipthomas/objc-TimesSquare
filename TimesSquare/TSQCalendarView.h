@@ -97,6 +97,12 @@
  */
 @property (nonatomic, strong) Class rowCellClass;
 
+/** If true, the final row's background image (horizontal separator) will not appear.
+ 
+ Defaults to NO.
+ */
+@property (nonatomic, assign) BOOL hideLastBottomRowBackground;
+
 /** Scrolls the receiver until the specified date month is completely visible.
 
  @param date A date that identifies the month that will be visible.

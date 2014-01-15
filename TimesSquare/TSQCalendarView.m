@@ -161,6 +161,11 @@
     return cell;
 }
 
+- (void)setHideLastBottomRowBackground:(int)hideLastBottomRowBackground
+{
+	_hideLastBottomRowBackground = hideLastBottomRowBackground;
+}
+
 #pragma mark Calendar calculations
 
 - (NSDate *)firstOfMonthForSection:(NSInteger)section;
@@ -263,8 +268,10 @@
     [(TSQCalendarRowCell *)cell setBeginningDate:[self.calendar dateByAddingComponents:dateComponents toDate:firstOfMonth options:0]];
     [(TSQCalendarRowCell *)cell selectColumnForDate:self.selectedDate];
     
-    BOOL isBottomRow = indexPath.row == [self tableView:tableView numberOfRowsInSection:indexPath.section] - 1;
-    [(TSQCalendarRowCell *)cell setBottomRow:isBottomRow];
+    BOOL isBottomRow = indexPath.row == ([self tableView:tableView numberOfRowsInSection:indexPath.section] - 1);
+	BOOL isLastMonth = (indexPath.section == ([self numberOfSectionsInTableView:tableView] - 1));
+	
+    [(TSQCalendarRowCell *)cell setBottomRow: (self.hideLastBottomRowBackground ? (isBottomRow && !isLastMonth) : isBottomRow)];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;

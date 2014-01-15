@@ -35,12 +35,6 @@
  */
 @property (nonatomic, strong) UIColor *headerDayLabelBackgroundColor;
 
-/** Month label text color.
- 
- Defaults to main text color.
- */
-@property (nonatomic, strong) UIColor *headerDayTextColor;
-
 /** Day header label color.
  
  Defaults to the main text color.

@@ -62,11 +62,6 @@
 	return self.textColor;
 }
 
-- (UIColor *) headerDayTextColor
-{
-	return self.textColor;
-}
-
 - (CGFloat) columnSpacing
 {
 	return 1.0f / [UIScreen mainScreen].scale;

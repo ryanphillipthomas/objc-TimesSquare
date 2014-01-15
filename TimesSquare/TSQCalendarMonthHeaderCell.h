@@ -47,6 +47,12 @@
  */
 @property (nonatomic, strong) UIColor *headerLabelTextColor;
 
+/** Day header label font.
+ 
+ Defaults bold system font of size 12.0f.
+ */
+@property (nonatomic, strong) UIFont *headerLabelFont;
+
 /** Day header label rect offset dx.
 
  Defaults to 0.0f.
@@ -58,6 +64,12 @@
  Defaults to 5.0f.
  */
 @property (nonatomic, assign) CGFloat headerLabelRectOffsetDY;
+
+/** Month header cell height.
+ 
+ Defaults to 20.0f.
+ */
+@property (nonatomic, assign) CGFloat headerCellMonthsHeight;
 
 /** Control whether or not to show month (and year) header
  

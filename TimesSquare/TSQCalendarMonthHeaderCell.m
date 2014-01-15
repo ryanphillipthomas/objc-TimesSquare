@@ -10,9 +10,6 @@
 #import "TSQCalendarMonthHeaderCell.h"
 
 
-static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
-
-
 @interface TSQCalendarMonthHeaderCell ()
 
 @property (nonatomic, strong) NSDateFormatter *monthDateFormatter;
@@ -75,6 +72,16 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
 	return 1.0f / [UIScreen mainScreen].scale;
 }
 
+- (CGFloat) headerCellMonthsHeight
+{
+	return 20.0f;
+}
+
+- (UIFont *) headerLabelFont
+{
+	return [UIFont boldSystemFontOfSize:12.f];
+}
+
 - (NSDateFormatter *)monthDateFormatter;
 {
     if (!_monthDateFormatter) {
@@ -107,8 +114,8 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
         UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
         label.textAlignment = NSTextAlignmentCenter;
         label.text = [dayFormatter stringFromDate:referenceDate];
-        label.font = [UIFont boldSystemFontOfSize:12.f];
-        label.backgroundColor = self.backgroundColor;
+		label.font = self.headerLabelFont;
+		label.backgroundColor = self.backgroundColor;
         label.textColor = self.headerLabelTextColor;
         label.shadowColor = [UIColor whiteColor];
         label.shadowOffset = self.shadowOffset;
@@ -134,7 +141,7 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
     [super layoutSubviews];
 
 	CGRect bounds = self.contentView.bounds;
-	bounds.size.height -= TSQCalendarMonthHeaderCellMonthsHeight;
+	bounds.size.height -= self.headerCellMonthsHeight;
 	self.textLabel.frame = CGRectOffset(bounds, self.headerLabelRectOffsetDX, self.headerLabelRectOffsetDY);
 }
 
@@ -142,8 +149,8 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
 {
     UILabel *label = self.headerLabels[index];
     CGRect labelFrame = rect;
-    labelFrame.size.height = TSQCalendarMonthHeaderCellMonthsHeight;
-    labelFrame.origin.y = self.bounds.size.height - TSQCalendarMonthHeaderCellMonthsHeight;
+	labelFrame.size.height = self.headerCellMonthsHeight * 2.0f;
+	labelFrame.origin.y = self.bounds.size.height - (self.headerCellMonthsHeight + self.headerCellMonthsHeight / 2.0f);
     label.frame = labelFrame;
 }
 

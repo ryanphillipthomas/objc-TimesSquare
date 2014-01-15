@@ -32,15 +32,16 @@
     self.layoutDirection = [NSLocale characterDirectionForLanguage:languageCode];
     self.backgroundColor = [UIColor colorWithRed:0.84f green:0.85f blue:0.86f alpha:1.0f];
     
-    CGFloat onePixel = 1.0f / [UIScreen mainScreen].scale;
-    
     static CGSize shadowOffset;
     static dispatch_once_t onceToken;
+	
+	__weak TSQCalendarCell *weakSelf = self;
+	
     dispatch_once(&onceToken, ^{
-        shadowOffset = CGSizeMake(0.0f, onePixel);
+		TSQCalendarCell *blockSelf = weakSelf;
+        shadowOffset = CGSizeMake(0.0f, weakSelf.columnSpacing);
     });
     self.shadowOffset = shadowOffset;
-    self.columnSpacing = onePixel;
 
     return self;
 }
@@ -84,10 +85,14 @@
     // for subclass to implement
 }
 
+- (CGFloat) columnSpacing {
+	return 1.0f / [UIScreen mainScreen].scale;
+}
+
 - (void)layoutSubviews;
 {
     [super layoutSubviews];
-    
+
     UIEdgeInsets insets = self.calendarView.contentInset;
     
     

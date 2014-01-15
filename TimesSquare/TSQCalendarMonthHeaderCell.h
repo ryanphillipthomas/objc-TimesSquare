@@ -29,6 +29,48 @@
  */
 @property (nonatomic, strong) NSString *headerLabelDateFormatterPattern;
 
+/** Day header label background color.
+ 
+ Defaults to the color passed into the -setBackgroundColor: method.
+ */
+@property (nonatomic, strong) UIColor *headerLabelBackgroundColor;
+
+/** Month label text color.
+ 
+ Defaults to main text color.
+ */
+@property (nonatomic, strong) UIColor *headerTextColor;
+
+/** Day header label color.
+ 
+ Defaults to the main text color.
+ */
+@property (nonatomic, strong) UIColor *headerLabelTextColor;
+
+/** Day header label rect offset dx.
+
+ Defaults to 0.0f.
+ */
+@property (nonatomic, assign) CGFloat headerLabelRectOffsetDX;
+
+/** Day header label rect offset dy.
+ 
+ Defaults to 5.0f.
+ */
+@property (nonatomic, assign) CGFloat headerLabelRectOffsetDY;
+
+/** Control whether or not to show month (and year) header
+ 
+ Defaults to NO.
+ */
+@property (nonatomic, assign) BOOL disableMonthHeaders;
+
+/** The spacing between columns of the header labels.
+ 
+ This defaults to one pixel or `1.0 / [UIScreen mainScreen].scale`.
+ */
+@property (nonatomic, assign) CGFloat columnSpacing;
+
 /** Creates the header labels.
  
  If you want the text in your header labels to be something other than the short day format ("Mon Tue Wed" etc.), override this method, call `super`, and loop through `self.headerLabels`, changing their text.

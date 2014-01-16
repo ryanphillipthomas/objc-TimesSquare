@@ -132,7 +132,17 @@
     for (NSUInteger index = 0; index < self.daysInWeek; index++) {
         [headerLabels addObject:@""];
     }
-    
+	if(self.showHeaderDayLabelTopSeparator) {
+		for (NSUInteger index = 0; index < self.daysInWeek; index++) {
+			[headerLabelTopSeparators addObject:@""];
+		}
+	}
+	if(self.showHeaderDayLabelBottomSeparator) {
+		for (NSUInteger index = 0; index < self.daysInWeek; index++) {
+			[headerLabelBottomSeparators addObject:@""];
+		}
+	}
+	
     for (NSUInteger index = 0; index < self.daysInWeek; index++) {
 		
 		// day of week label

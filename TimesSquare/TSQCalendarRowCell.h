@@ -95,6 +95,13 @@ This is white by default.
  */
 @property (nonatomic, getter = isBottomRow) BOOL bottomRow;
 
+/** Whether the selected background should fill the cell or not.
+ 
+ Default value is YES.  Otherwise, if you have a background image that shouldn't fill the cell but
+ instead maintain its original dimensions regardless of the size of the cell (iPad, etc.), set this to YES.
+ */
+@property (nonatomic, assign, readonly) BOOL selectedBackgroundShouldFill;
+
 /** Method to select a specific date within the week.
 
  This is funneled through and called by the calendar view, to facilitate deselection of other rows.

@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSArray *notThisMonthButtons;
 @property (nonatomic, strong) UIButton *todayButton;
 @property (nonatomic, strong) UIButton *selectedButton;
+@property (nonatomic, strong) UIImageView *selectedButtonImageView;
 
 @property (nonatomic, assign) NSInteger indexOfTodayButton;
 @property (nonatomic, assign) NSInteger indexOfSelectedButton;
@@ -70,6 +71,12 @@
 - (UIColor *)selectedDateTextShadowColor
 {
 	return [UIColor colorWithWhite:0.0f alpha:0.75f];
+}
+
+- (BOOL)selectedBackgroundShouldFill
+{
+	// if NO, selectedButtonImageView will be used instead of setting a background image for the button.
+	return YES;
 }
 
 - (void)configureButton:(UIButton *)button;
@@ -127,6 +134,13 @@
 
 - (void)createSelectedButton;
 {
+	if(!self.selectedBackgroundShouldFill) {
+		self.selectedButtonImageView = [[UIImageView alloc] initWithImage:[self selectedBackgroundImage]];
+		self.selectedButtonImageView.contentMode = UIViewContentModeCenter;
+		[self.contentView addSubview:self.selectedButtonImageView];
+		self.selectedButtonImageView.hidden = YES;
+	}
+
     self.selectedButton = [[UIButton alloc] initWithFrame:self.contentView.bounds];
     [self.contentView addSubview:self.selectedButton];
     [self configureButton:self.selectedButton];
@@ -135,7 +149,9 @@
     
     self.selectedButton.enabled = NO;
     [self.selectedButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.selectedButton setBackgroundImage:[self selectedBackgroundImage] forState:UIControlStateNormal];
+	if(self.selectedBackgroundShouldFill) {
+		[self.selectedButton setBackgroundImage:[self selectedBackgroundImage] forState:UIControlStateNormal];
+	}
 	[self.selectedButton setTitleShadowColor:[self selectedDateTextShadowColor] forState:UIControlStateNormal];
     
     self.selectedButton.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f / [UIScreen mainScreen].scale);
@@ -159,6 +175,7 @@
     self.todayButton.hidden = YES;
     self.indexOfTodayButton = -1;
     self.selectedButton.hidden = YES;
+	self.selectedButtonImageView.hidden = YES;
     self.indexOfSelectedButton = -1;
     
     for (NSUInteger index = 0; index < self.daysInWeek; index++) {
@@ -257,6 +274,7 @@
     }
     if (self.indexOfSelectedButton == (NSInteger)index) {
         self.selectedButton.frame = rect;
+		self.selectedButtonImageView.frame = rect;
     }
 }
 
@@ -281,10 +299,12 @@
     
     if (newIndexOfSelectedButton >= 0) {
         self.selectedButton.hidden = NO;
+		self.selectedButtonImageView.hidden = NO;
         [self.selectedButton setTitle:[self.dayButtons[newIndexOfSelectedButton] currentTitle] forState:UIControlStateNormal];
         [self.selectedButton setAccessibilityLabel:[self.dayButtons[newIndexOfSelectedButton] accessibilityLabel]];
     } else {
         self.selectedButton.hidden = YES;
+		self.selectedButtonImageView.hidden = YES;
     }
     
     [self setNeedsLayout];

@@ -153,17 +153,21 @@
   [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section] atScrollPosition:UITableViewScrollPositionTop animated:animated];
 }
 
+- (void)setHideLastBottomRowBackground:(int)hideLastBottomRowBackground
+{
+	_hideLastBottomRowBackground = hideLastBottomRowBackground;
+}
+
+- (void)setHideTopRowBackground:(BOOL)hideTopRowBackground {
+	_hideTopRowBackground = hideTopRowBackground;
+}
+
 - (TSQCalendarMonthHeaderCell *)makeHeaderCellWithIdentifier:(NSString *)identifier;
 {
     TSQCalendarMonthHeaderCell *cell = [[[self headerCellClass] alloc] initWithCalendar:self.calendar reuseIdentifier:identifier];
     cell.backgroundColor = self.backgroundColor;
     cell.calendarView = self;
     return cell;
-}
-
-- (void)setHideLastBottomRowBackground:(int)hideLastBottomRowBackground
-{
-	_hideLastBottomRowBackground = hideLastBottomRowBackground;
 }
 
 #pragma mark Calendar calculations
@@ -270,8 +274,13 @@
     
     BOOL isBottomRow = indexPath.row == ([self tableView:tableView numberOfRowsInSection:indexPath.section] - 1);
 	BOOL isLastMonth = (indexPath.section == ([self numberOfSectionsInTableView:tableView] - 1));
-	
-    [(TSQCalendarRowCell *)cell setBottomRow: (self.hideLastBottomRowBackground ? (isBottomRow && !isLastMonth) : isBottomRow)];
+
+	if(self.hideTopRowBackground && indexPath.row == 0) {
+		((TSQCalendarRowCell *)cell).backgroundView = nil;
+	}
+	else {
+		[(TSQCalendarRowCell *)cell setBottomRow: (self.hideLastBottomRowBackground ? (isBottomRow && !isLastMonth) : isBottomRow)];
+	}
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;

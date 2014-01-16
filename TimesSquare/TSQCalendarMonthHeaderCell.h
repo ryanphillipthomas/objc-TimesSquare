@@ -89,6 +89,22 @@
  */
 @property (nonatomic, assign) CGFloat columnSpacing;
 
+/** If enabled, header day labels will have a top separator.
+ 
+ Default is NO.
+ */
+@property (nonatomic, assign) BOOL showHeaderDayLabelTopSeparator;
+
+/** If enabled, header day labels will have a bottom separator.
+ 
+ Default is NO.
+ */
+@property (nonatomic, assign) BOOL showHeaderDayLabelBottomSeparator;
+
+/** Header day label separator background.
+ */
+@property (nonatomic, strong) UIColor *headerDayLabelSeparatorBackgroundColor;
+
 /** Creates the header labels.
  
  If you want the text in your header labels to be something other than the short day format ("Mon Tue Wed" etc.), override this method, call `super`, and loop through `self.headerLabels`, changing their text.

@@ -227,10 +227,12 @@
 
 - (void)layoutSubviews;
 {
-    if (!self.backgroundView) {
-        [self setBottomRow:NO];
-    }
-    
+	if(!self.calendarView.hideTopRowBackground) {
+		if (!self.backgroundView) {
+			[self setBottomRow:NO];
+		}
+	}
+	
     [super layoutSubviews];
     
     // Size the background view with horizontal insets

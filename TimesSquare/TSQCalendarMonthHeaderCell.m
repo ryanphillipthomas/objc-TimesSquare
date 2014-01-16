@@ -13,6 +13,8 @@
 @interface TSQCalendarMonthHeaderCell ()
 
 @property (nonatomic, strong) NSDateFormatter *monthDateFormatter;
+@property (nonatomic, strong) NSArray *headerLabelTopSeparators;
+@property (nonatomic, strong) NSArray *headerLabelBottomSeparators;
 
 @end
 
@@ -87,6 +89,21 @@
 	return self.textColor;
 }
 
+- (BOOL) showHeaderDayLabelTopSeparator
+{
+	return NO;
+}
+
+- (BOOL) showHeaderDayLabelBottomSeparator
+{
+	return NO;
+}
+
+- (UIColor *) headerDayLabelSeparatorBackgroundColor
+{
+	return [UIColor grayColor];
+}
+
 - (NSDateFormatter *)monthDateFormatter;
 {
     if (!_monthDateFormatter) {
@@ -105,6 +122,8 @@
     NSDateComponents *offset = [NSDateComponents new];
     offset.day = 1;
     NSMutableArray *headerLabels = [NSMutableArray arrayWithCapacity:self.daysInWeek];
+	NSMutableArray *headerLabelTopSeparators = [NSMutableArray arrayWithCapacity:self.daysInWeek];
+	NSMutableArray *headerLabelBottomSeparators = [NSMutableArray arrayWithCapacity:self.daysInWeek];
     
     NSDateFormatter *dayFormatter = [NSDateFormatter new];
     dayFormatter.calendar = self.calendar;
@@ -115,6 +134,8 @@
     }
     
     for (NSUInteger index = 0; index < self.daysInWeek; index++) {
+		
+		// day of week label
         NSInteger ordinality = [self.calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSWeekCalendarUnit forDate:referenceDate];
         UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
         label.textAlignment = NSTextAlignmentCenter;
@@ -127,11 +148,26 @@
         [label sizeToFit];
         headerLabels[ordinality - 1] = label;
         [self.contentView addSubview:label];
-        
+
+		if(self.showHeaderDayLabelTopSeparator) {
+			// top separator
+			UIView *topSeparator = [[UIView alloc] initWithFrame:label.frame];
+			headerLabelTopSeparators[ordinality - 1] = topSeparator;
+			[self.contentView addSubview:topSeparator];
+		}
+		if(self.showHeaderDayLabelBottomSeparator) {
+			// bottom separator
+			UIView *bottomSeparator = [[UIView alloc] initWithFrame:label.frame];
+			headerLabelBottomSeparators[ordinality - 1] = bottomSeparator;
+			[self.contentView addSubview:bottomSeparator];
+		}
+		
         referenceDate = [self.calendar dateByAddingComponents:offset toDate:referenceDate options:0];
     }
     
     self.headerLabels = headerLabels;
+	self.headerLabelTopSeparators = headerLabelTopSeparators;
+	self.headerLabelBottomSeparators = headerLabelBottomSeparators;
 	
 	if(!self.disableMonthHeaders) {
 		self.textLabel.font = self.headerMonthLabelFont;
@@ -139,6 +175,7 @@
 		self.textLabel.textColor = self.headerMonthTextColor;
 		self.textLabel.shadowColor = [UIColor whiteColor];
 		self.textLabel.shadowOffset = self.shadowOffset;
+		self.textLabel.backgroundColor = [UIColor clearColor];
 	}
 }
 
@@ -155,9 +192,24 @@
 {
     UILabel *label = self.headerLabels[index];
     CGRect labelFrame = rect;
-	labelFrame.size.height = self.headerCellMonthsHeight * 2.0f;
-	labelFrame.origin.y = self.bounds.size.height - (self.headerCellMonthsHeight + self.headerCellMonthsHeight / 2.0f);
+	labelFrame.size.height = self.headerCellMonthsHeight;
+	labelFrame.origin.y = self.bounds.size.height - self.headerCellMonthsHeight;
     label.frame = labelFrame;
+	
+	if(self.showHeaderDayLabelTopSeparator) {
+		UIView *topSeparator = self.headerLabelTopSeparators[index];
+		CGRect topSeparatorFrame = rect;
+		topSeparatorFrame.size.height = (1.0f / [UIScreen mainScreen].scale);
+		topSeparatorFrame.origin.y = label.frame.origin.y;
+		topSeparator.frame = topSeparatorFrame;
+	}
+	if(self.showHeaderDayLabelBottomSeparator) {
+		UIView *bottomSeparator = self.headerLabelBottomSeparators[index];
+		CGRect bottomSeparatorFrame = rect;
+		bottomSeparatorFrame.size.height = (1.0f / [UIScreen mainScreen].scale);
+		bottomSeparatorFrame.origin.y = self.bounds.size.height - (1.0f / [UIScreen mainScreen].scale);
+		bottomSeparator.frame = bottomSeparatorFrame;
+	}
 }
 
 - (void)setFirstOfMonth:(NSDate *)firstOfMonth;
@@ -175,6 +227,16 @@
     for (UILabel *label in self.headerLabels) {
         label.backgroundColor = self.headerDayLabelBackgroundColor ? self.headerDayLabelBackgroundColor : backgroundColor;
     }
+	if(self.showHeaderDayLabelTopSeparator) {
+		for (UIView *separator in self.headerLabelTopSeparators) {
+			separator.backgroundColor = self.headerDayLabelSeparatorBackgroundColor;
+		}
+	}
+	if(self.showHeaderDayLabelBottomSeparator) {
+		for (UIView *separator in self.headerLabelBottomSeparators) {
+			separator.backgroundColor = self.headerDayLabelSeparatorBackgroundColor;
+		}
+	}
 }
 
 @end

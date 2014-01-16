@@ -103,6 +103,15 @@
  */
 @property (nonatomic, assign) BOOL hideLastBottomRowBackground;
 
+/** If true, the top row of each month will not have a background.
+ 
+ This is useful if the custom background images don't have vertical separators and we already have separators on the top and bottom 
+ of the parent container.
+ 
+ Defaults to NO.
+ */
+@property (nonatomic, assign) BOOL hideTopRowBackground;
+
 /** Scrolls the receiver until the specified date month is completely visible.
 
  @param date A date that identifies the month that will be visible.

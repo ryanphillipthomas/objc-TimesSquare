@@ -149,8 +149,17 @@
 
 - (void)scrollToDate:(NSDate *)date animated:(BOOL)animated
 {
-  NSInteger section = [self sectionForDate:date];
-  [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section] atScrollPosition:UITableViewScrollPositionTop animated:animated];
+	[self scrollToDate:date ignoreMonth:NO animated:animated];
+}
+
+- (void)scrollToDate:(NSDate *)date ignoreMonth:(BOOL)ignoreMonth animated:(BOOL)animated
+{
+	NSInteger section = [self sectionForDate:date];
+	NSIndexPath *monthIndexPath = [NSIndexPath indexPathForRow:0 inSection:section];
+	NSIndexPath *dateIndexPath = [self indexPathForRowAtDate:date];
+	[self.tableView scrollToRowAtIndexPath: (ignoreMonth ? dateIndexPath : monthIndexPath)
+						  atScrollPosition: (ignoreMonth ? UITableViewScrollPositionMiddle : UITableViewScrollPositionTop)
+								  animated:animated];
 }
 
 - (void)setHideLastBottomRowBackground:(int)hideLastBottomRowBackground

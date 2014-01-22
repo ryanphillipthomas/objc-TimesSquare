@@ -119,6 +119,14 @@
  */
 - (void)scrollToDate:(NSDate *)date animated:(BOOL)animated;
 
+/** Scrolls the receiver until the specified date is completely visible if ignoreMonth is YES.
+ 
+ @param date A date that identifies the week row that will be completely visible if ignoreMonth is YES.
+ @param ignoreMonth YES if you want the week containing the date to be completely visible, otherwise only the month section will be considered.
+ @param animated YES if you want to animate the change in position, NO if it should be immediate.
+ */
+- (void)scrollToDate:(NSDate *)date ignoreMonth:(BOOL)ignoreMonth animated:(BOOL)animated;
+
 @end
 
 /** The methods in the `TSQCalendarViewDelegate` protocol allow the adopting delegate to either prevent a day from being selected or respond to it.

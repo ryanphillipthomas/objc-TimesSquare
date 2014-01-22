@@ -104,6 +104,11 @@
 	return [UIColor grayColor];
 }
 
+- (UIColor *) monthHeaderBackgroundColor
+{
+	return [UIColor clearColor];
+}
+
 - (NSDateFormatter *)monthDateFormatter;
 {
     if (!_monthDateFormatter) {
@@ -185,7 +190,7 @@
 		self.textLabel.textColor = self.headerMonthTextColor;
 		self.textLabel.shadowColor = [UIColor whiteColor];
 		self.textLabel.shadowOffset = self.shadowOffset;
-		self.textLabel.backgroundColor = [UIColor clearColor];
+		self.textLabel.backgroundColor = self.monthHeaderBackgroundColor;
 	}
 }
 
@@ -228,6 +233,7 @@
 	if(!self.disableMonthHeaders) {
 		self.textLabel.text = [self.monthDateFormatter stringFromDate:firstOfMonth];
 		self.accessibilityLabel = self.textLabel.text;
+		self.textLabel.backgroundColor = self.monthHeaderBackgroundColor;
 	}
 }
 

@@ -105,6 +105,12 @@
  */
 @property (nonatomic, strong) UIColor *headerDayLabelSeparatorBackgroundColor;
 
+/** Month header background color.
+ 
+ Default is clear color.
+ */
+@property (nonatomic, strong) UIColor *monthHeaderBackgroundColor;
+
 /** Creates the header labels.
  
  If you want the text in your header labels to be something other than the short day format ("Mon Tue Wed" etc.), override this method, call `super`, and loop through `self.headerLabels`, changing their text.

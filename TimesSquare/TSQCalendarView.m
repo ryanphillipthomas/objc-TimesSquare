@@ -162,15 +162,6 @@
 								  animated:animated];
 }
 
-- (void)setHideLastBottomRowBackground:(int)hideLastBottomRowBackground
-{
-	_hideLastBottomRowBackground = hideLastBottomRowBackground;
-}
-
-- (void)setHideTopRowBackground:(BOOL)hideTopRowBackground {
-	_hideTopRowBackground = hideTopRowBackground;
-}
-
 - (TSQCalendarMonthHeaderCell *)makeHeaderCellWithIdentifier:(NSString *)identifier;
 {
     TSQCalendarMonthHeaderCell *cell = [[[self headerCellClass] alloc] initWithCalendar:self.calendar reuseIdentifier:identifier];

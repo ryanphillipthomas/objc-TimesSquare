@@ -39,7 +39,7 @@
 	
     dispatch_once(&onceToken, ^{
 		TSQCalendarCell *blockSelf = weakSelf;
-        shadowOffset = CGSizeMake(0.0f, weakSelf.columnSpacing);
+        shadowOffset = CGSizeMake(0.0f, blockSelf.columnSpacing);
     });
     self.shadowOffset = shadowOffset;
 

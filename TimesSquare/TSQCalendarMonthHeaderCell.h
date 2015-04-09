@@ -83,12 +83,6 @@
  */
 @property (nonatomic, assign) BOOL disableMonthHeaders;
 
-/** The spacing between columns of the header labels.
- 
- This defaults to one pixel or `1.0 / [UIScreen mainScreen].scale`.
- */
-@property (nonatomic, assign) CGFloat columnSpacing;
-
 /** If enabled, header day labels will have a top separator.
  
  Default is NO.

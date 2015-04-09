@@ -60,7 +60,7 @@
 {
     static NSUInteger daysInWeek = 0;
     if (daysInWeek == 0) {
-        daysInWeek = [self.calendar maximumRangeOfUnit:NSWeekdayCalendarUnit].length;
+        daysInWeek = [self.calendar maximumRangeOfUnit:NSCalendarUnitWeekday].length;
     }
     return daysInWeek;
 }

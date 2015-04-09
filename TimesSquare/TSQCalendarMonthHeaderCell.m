@@ -151,7 +151,7 @@
     for (NSUInteger index = 0; index < self.daysInWeek; index++) {
 		
 		// day of week label
-        NSInteger ordinality = [self.calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSWeekCalendarUnit forDate:referenceDate];
+        NSInteger ordinality = [self.calendar ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitWeekOfMonth forDate:referenceDate];
         UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
         label.textAlignment = NSTextAlignmentCenter;
         label.text = [dayFormatter stringFromDate:referenceDate];

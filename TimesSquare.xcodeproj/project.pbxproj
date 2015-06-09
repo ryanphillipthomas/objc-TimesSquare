@@ -7,111 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A806805F16700FD70071C71E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A806805E16700FD70071C71E /* Foundation.framework */; };
-		A806808E167010030071C71E /* TSQCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8068087167010030071C71E /* TSQCalendarCell.m */; };
-		A8068090167010030071C71E /* TSQCalendarMonthHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8068089167010030071C71E /* TSQCalendarMonthHeaderCell.m */; };
-		A8068092167010030071C71E /* TSQCalendarRowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A806808B167010030071C71E /* TSQCalendarRowCell.m */; };
-		A8068094167010030071C71E /* TSQCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A806808D167010030071C71E /* TSQCalendarView.m */; };
-		A80B62AB1672720C00792DFE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A806809E167012980071C71E /* CoreGraphics.framework */; };
-		EFD8DE6D167AF77B00F87FBE /* TimesSquare.h in Headers */ = {isa = PBXBuildFile; fileRef = A806806316700FD70071C71E /* TimesSquare.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFD8DE6E167AF78100F87FBE /* TSQCalendarCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A8068086167010030071C71E /* TSQCalendarCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFD8DE6F167AF78600F87FBE /* TSQCalendarMonthHeaderCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A8068088167010030071C71E /* TSQCalendarMonthHeaderCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFD8DE70167AF78C00F87FBE /* TSQCalendarRowCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A806808A167010030071C71E /* TSQCalendarRowCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFD8DE71167AF79000F87FBE /* TSQCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = A806808C167010030071C71E /* TSQCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		000333841B27B42F008C973D /* TSQCalendarCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0003337C1B27B42F008C973D /* TSQCalendarCell.h */; };
+		000333851B27B42F008C973D /* TSQCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0003337D1B27B42F008C973D /* TSQCalendarCell.m */; };
+		000333861B27B42F008C973D /* TSQCalendarMonthHeaderCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0003337E1B27B42F008C973D /* TSQCalendarMonthHeaderCell.h */; };
+		000333871B27B42F008C973D /* TSQCalendarMonthHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0003337F1B27B42F008C973D /* TSQCalendarMonthHeaderCell.m */; };
+		000333881B27B42F008C973D /* TSQCalendarRowCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 000333801B27B42F008C973D /* TSQCalendarRowCell.h */; };
+		000333891B27B42F008C973D /* TSQCalendarRowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 000333811B27B42F008C973D /* TSQCalendarRowCell.m */; };
+		0003338A1B27B42F008C973D /* TSQCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 000333821B27B42F008C973D /* TSQCalendarView.h */; };
+		0003338B1B27B42F008C973D /* TSQCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000333831B27B42F008C973D /* TSQCalendarView.m */; };
+		0003338D1B27B43A008C973D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0003338C1B27B43A008C973D /* UIKit.framework */; };
+		0003338F1B27B44B008C973D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0003338E1B27B44B008C973D /* Foundation.framework */; };
+		0036308E1B27B3B5007691A1 /* TimesSquare.h in Headers */ = {isa = PBXBuildFile; fileRef = 0036308D1B27B3B5007691A1 /* TimesSquare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		A806805916700FD70071C71E /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		A806805B16700FD70071C71E /* libTimesSquare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTimesSquare.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A806805E16700FD70071C71E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		A806806216700FD70071C71E /* TimesSquare-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimesSquare-Prefix.pch"; sourceTree = "<group>"; };
-		A806806316700FD70071C71E /* TimesSquare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimesSquare.h; sourceTree = "<group>"; };
-		A806806D16700FD80071C71E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		A806806F16700FD80071C71E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		A8068086167010030071C71E /* TSQCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSQCalendarCell.h; sourceTree = "<group>"; };
-		A8068087167010030071C71E /* TSQCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSQCalendarCell.m; sourceTree = "<group>"; };
-		A8068088167010030071C71E /* TSQCalendarMonthHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSQCalendarMonthHeaderCell.h; sourceTree = "<group>"; };
-		A8068089167010030071C71E /* TSQCalendarMonthHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSQCalendarMonthHeaderCell.m; sourceTree = "<group>"; };
-		A806808A167010030071C71E /* TSQCalendarRowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSQCalendarRowCell.h; sourceTree = "<group>"; };
-		A806808B167010030071C71E /* TSQCalendarRowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSQCalendarRowCell.m; sourceTree = "<group>"; };
-		A806808C167010030071C71E /* TSQCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSQCalendarView.h; sourceTree = "<group>"; };
-		A806808D167010030071C71E /* TSQCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSQCalendarView.m; sourceTree = "<group>"; };
-		A806809E167012980071C71E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0003337C1B27B42F008C973D /* TSQCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSQCalendarCell.h; sourceTree = "<group>"; };
+		0003337D1B27B42F008C973D /* TSQCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSQCalendarCell.m; sourceTree = "<group>"; };
+		0003337E1B27B42F008C973D /* TSQCalendarMonthHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSQCalendarMonthHeaderCell.h; sourceTree = "<group>"; };
+		0003337F1B27B42F008C973D /* TSQCalendarMonthHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSQCalendarMonthHeaderCell.m; sourceTree = "<group>"; };
+		000333801B27B42F008C973D /* TSQCalendarRowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSQCalendarRowCell.h; sourceTree = "<group>"; };
+		000333811B27B42F008C973D /* TSQCalendarRowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSQCalendarRowCell.m; sourceTree = "<group>"; };
+		000333821B27B42F008C973D /* TSQCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSQCalendarView.h; sourceTree = "<group>"; };
+		000333831B27B42F008C973D /* TSQCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSQCalendarView.m; sourceTree = "<group>"; };
+		0003338C1B27B43A008C973D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0003338E1B27B44B008C973D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		003630881B27B3B5007691A1 /* TimesSquare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TimesSquare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0036308C1B27B3B5007691A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0036308D1B27B3B5007691A1 /* TimesSquare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimesSquare.h; sourceTree = "<group>"; };
+		003630991B27B3B5007691A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0036309A1B27B3B5007691A1 /* TimesSquareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimesSquareTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A806805816700FD70071C71E /* Frameworks */ = {
+		003630841B27B3B5007691A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A80B62AB1672720C00792DFE /* CoreGraphics.framework in Frameworks */,
-				A806805F16700FD70071C71E /* Foundation.framework in Frameworks */,
+				0003338F1B27B44B008C973D /* Foundation.framework in Frameworks */,
+				0003338D1B27B43A008C973D /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A806805016700FD70071C71E = {
+		0036307E1B27B3B5007691A1 = {
 			isa = PBXGroup;
 			children = (
-				A806806016700FD70071C71E /* TimesSquare */,
-				A806805D16700FD70071C71E /* Frameworks */,
-				A806805C16700FD70071C71E /* Products */,
+				0003338E1B27B44B008C973D /* Foundation.framework */,
+				0003338C1B27B43A008C973D /* UIKit.framework */,
+				0036308A1B27B3B5007691A1 /* TimesSquare */,
+				003630971B27B3B5007691A1 /* TimesSquareTests */,
+				003630891B27B3B5007691A1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A806805C16700FD70071C71E /* Products */ = {
+		003630891B27B3B5007691A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A806805B16700FD70071C71E /* libTimesSquare.a */,
+				003630881B27B3B5007691A1 /* TimesSquare.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A806805D16700FD70071C71E /* Frameworks */ = {
+		0036308A1B27B3B5007691A1 /* TimesSquare */ = {
 			isa = PBXGroup;
 			children = (
-				A806805E16700FD70071C71E /* Foundation.framework */,
-				A806806D16700FD80071C71E /* SenTestingKit.framework */,
-				A806806F16700FD80071C71E /* UIKit.framework */,
-				A806809E167012980071C71E /* CoreGraphics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A806806016700FD70071C71E /* TimesSquare */ = {
-			isa = PBXGroup;
-			children = (
-				A806806316700FD70071C71E /* TimesSquare.h */,
-				A8068086167010030071C71E /* TSQCalendarCell.h */,
-				A8068087167010030071C71E /* TSQCalendarCell.m */,
-				A8068088167010030071C71E /* TSQCalendarMonthHeaderCell.h */,
-				A8068089167010030071C71E /* TSQCalendarMonthHeaderCell.m */,
-				A806808A167010030071C71E /* TSQCalendarRowCell.h */,
-				A806808B167010030071C71E /* TSQCalendarRowCell.m */,
-				A806808C167010030071C71E /* TSQCalendarView.h */,
-				A806808D167010030071C71E /* TSQCalendarView.m */,
-				A806806116700FD70071C71E /* Supporting Files */,
+				0036308D1B27B3B5007691A1 /* TimesSquare.h */,
+				0003337C1B27B42F008C973D /* TSQCalendarCell.h */,
+				0003337D1B27B42F008C973D /* TSQCalendarCell.m */,
+				0003337E1B27B42F008C973D /* TSQCalendarMonthHeaderCell.h */,
+				0003337F1B27B42F008C973D /* TSQCalendarMonthHeaderCell.m */,
+				000333801B27B42F008C973D /* TSQCalendarRowCell.h */,
+				000333811B27B42F008C973D /* TSQCalendarRowCell.m */,
+				000333821B27B42F008C973D /* TSQCalendarView.h */,
+				000333831B27B42F008C973D /* TSQCalendarView.m */,
+				0036308B1B27B3B5007691A1 /* Supporting Files */,
 			);
 			path = TimesSquare;
 			sourceTree = "<group>";
 		};
-		A806806116700FD70071C71E /* Supporting Files */ = {
+		0036308B1B27B3B5007691A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A806806216700FD70071C71E /* TimesSquare-Prefix.pch */,
+				0036308C1B27B3B5007691A1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		003630971B27B3B5007691A1 /* TimesSquareTests */ = {
+			isa = PBXGroup;
+			children = (
+				0036309A1B27B3B5007691A1 /* TimesSquareTests.m */,
+				003630981B27B3B5007691A1 /* Supporting Files */,
+			);
+			path = TimesSquareTests;
+			sourceTree = "<group>";
+		};
+		003630981B27B3B5007691A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				003630991B27B3B5007691A1 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,239 +115,235 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		EFD8DE6B167AF77100F87FBE /* Headers */ = {
+		003630851B27B3B5007691A1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFD8DE6D167AF77B00F87FBE /* TimesSquare.h in Headers */,
-				EFD8DE6E167AF78100F87FBE /* TSQCalendarCell.h in Headers */,
-				EFD8DE6F167AF78600F87FBE /* TSQCalendarMonthHeaderCell.h in Headers */,
-				EFD8DE70167AF78C00F87FBE /* TSQCalendarRowCell.h in Headers */,
-				EFD8DE71167AF79000F87FBE /* TSQCalendarView.h in Headers */,
+				000333881B27B42F008C973D /* TSQCalendarRowCell.h in Headers */,
+				0036308E1B27B3B5007691A1 /* TimesSquare.h in Headers */,
+				000333841B27B42F008C973D /* TSQCalendarCell.h in Headers */,
+				0003338A1B27B42F008C973D /* TSQCalendarView.h in Headers */,
+				000333861B27B42F008C973D /* TSQCalendarMonthHeaderCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
-/* Begin PBXLegacyTarget section */
-		A81E05F71682A0E000E79A2B /* TimesSquare Documentation */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "--exit-threshold 2 --logformat xcode --output /tmp/tsq-docs --project-name TimesSquare --project-version 1.0 --project-company \"Square, Inc.\" --company-id com.squareup --no-repeat-first-par --no-search-undocumented-doc TimesSquare/";
-			buildConfigurationList = A81E05F81682A0E000E79A2B /* Build configuration list for PBXLegacyTarget "TimesSquare Documentation" */;
-			buildPhases = (
-			);
-			buildToolPath = /usr/local/bin/appledoc;
-			buildWorkingDirectory = "";
-			dependencies = (
-			);
-			name = "TimesSquare Documentation";
-			passBuildSettingsInEnvironment = 0;
-			productName = "TimesSquare Documentation";
-		};
-/* End PBXLegacyTarget section */
-
 /* Begin PBXNativeTarget section */
-		A806805A16700FD70071C71E /* TimesSquare */ = {
+		003630871B27B3B5007691A1 /* TimesSquare */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A806808016700FD80071C71E /* Build configuration list for PBXNativeTarget "TimesSquare" */;
+			buildConfigurationList = 0036309E1B27B3B5007691A1 /* Build configuration list for PBXNativeTarget "TimesSquare" */;
 			buildPhases = (
-				EFD8DE6B167AF77100F87FBE /* Headers */,
-				A806805716700FD70071C71E /* Sources */,
-				A806805816700FD70071C71E /* Frameworks */,
-				A806805916700FD70071C71E /* CopyFiles */,
+				003630831B27B3B5007691A1 /* Sources */,
+				003630841B27B3B5007691A1 /* Frameworks */,
+				003630851B27B3B5007691A1 /* Headers */,
+				003630861B27B3B5007691A1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TimesSquare;
-			productName = PonyDate;
-			productReference = A806805B16700FD70071C71E /* libTimesSquare.a */;
-			productType = "com.apple.product-type.library.static";
+			productName = TimesSquare;
+			productReference = 003630881B27B3B5007691A1 /* TimesSquare.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A806805216700FD70071C71E /* Project object */ = {
+		0036307F1B27B3B5007691A1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
-				ORGANIZATIONNAME = Square;
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = TimesSquare;
+				TargetAttributes = {
+					003630871B27B3B5007691A1 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
 			};
-			buildConfigurationList = A806805516700FD70071C71E /* Build configuration list for PBXProject "TimesSquare" */;
+			buildConfigurationList = 003630821B27B3B5007691A1 /* Build configuration list for PBXProject "TimesSquare" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = A806805016700FD70071C71E;
-			productRefGroup = A806805C16700FD70071C71E /* Products */;
+			mainGroup = 0036307E1B27B3B5007691A1;
+			productRefGroup = 003630891B27B3B5007691A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A806805A16700FD70071C71E /* TimesSquare */,
-				A81E05F71682A0E000E79A2B /* TimesSquare Documentation */,
+				003630871B27B3B5007691A1 /* TimesSquare */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		003630861B27B3B5007691A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		A806805716700FD70071C71E /* Sources */ = {
+		003630831B27B3B5007691A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A806808E167010030071C71E /* TSQCalendarCell.m in Sources */,
-				A8068090167010030071C71E /* TSQCalendarMonthHeaderCell.m in Sources */,
-				A8068092167010030071C71E /* TSQCalendarRowCell.m in Sources */,
-				A8068094167010030071C71E /* TSQCalendarView.m in Sources */,
+				000333891B27B42F008C973D /* TSQCalendarRowCell.m in Sources */,
+				0003338B1B27B42F008C973D /* TSQCalendarView.m in Sources */,
+				000333871B27B42F008C973D /* TSQCalendarMonthHeaderCell.m in Sources */,
+				000333851B27B42F008C973D /* TSQCalendarCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A806807E16700FD80071C71E /* Debug */ = {
+		0036309C1B27B3B5007691A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_PEDANTIC = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		A806807F16700FD80071C71E /* Release */ = {
+		0036309D1B27B3B5007691A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_PEDANTIC = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		A806808116700FD80071C71E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				DSTROOT = /tmp/TimesSquare.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TimesSquare/TimesSquare-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A806808216700FD80071C71E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				DSTROOT = /tmp/TimesSquare.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TimesSquare/TimesSquare-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		A81E05F91682A0E000E79A2B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				DEBUGGING_SYMBOLS = YES;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		A81E05FA1682A0E000E79A2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0036309F1B27B3B5007691A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TimesSquare/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		003630A01B27B3B5007691A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TimesSquare/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A806805516700FD70071C71E /* Build configuration list for PBXProject "TimesSquare" */ = {
+		003630821B27B3B5007691A1 /* Build configuration list for PBXProject "TimesSquare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A806807E16700FD80071C71E /* Debug */,
-				A806807F16700FD80071C71E /* Release */,
+				0036309C1B27B3B5007691A1 /* Debug */,
+				0036309D1B27B3B5007691A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A806808016700FD80071C71E /* Build configuration list for PBXNativeTarget "TimesSquare" */ = {
+		0036309E1B27B3B5007691A1 /* Build configuration list for PBXNativeTarget "TimesSquare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A806808116700FD80071C71E /* Debug */,
-				A806808216700FD80071C71E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A81E05F81682A0E000E79A2B /* Build configuration list for PBXLegacyTarget "TimesSquare Documentation" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A81E05F91682A0E000E79A2B /* Debug */,
-				A81E05FA1682A0E000E79A2B /* Release */,
+				0036309F1B27B3B5007691A1 /* Debug */,
+				003630A01B27B3B5007691A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A806805216700FD70071C71E /* Project object */;
+	rootObject = 0036307F1B27B3B5007691A1 /* Project object */;
 }

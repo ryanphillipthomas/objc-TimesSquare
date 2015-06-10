@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		000333841B27B42F008C973D /* TSQCalendarCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0003337C1B27B42F008C973D /* TSQCalendarCell.h */; };
+		000333841B27B42F008C973D /* TSQCalendarCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0003337C1B27B42F008C973D /* TSQCalendarCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		000333851B27B42F008C973D /* TSQCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0003337D1B27B42F008C973D /* TSQCalendarCell.m */; };
-		000333861B27B42F008C973D /* TSQCalendarMonthHeaderCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0003337E1B27B42F008C973D /* TSQCalendarMonthHeaderCell.h */; };
+		000333861B27B42F008C973D /* TSQCalendarMonthHeaderCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0003337E1B27B42F008C973D /* TSQCalendarMonthHeaderCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		000333871B27B42F008C973D /* TSQCalendarMonthHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0003337F1B27B42F008C973D /* TSQCalendarMonthHeaderCell.m */; };
-		000333881B27B42F008C973D /* TSQCalendarRowCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 000333801B27B42F008C973D /* TSQCalendarRowCell.h */; };
+		000333881B27B42F008C973D /* TSQCalendarRowCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 000333801B27B42F008C973D /* TSQCalendarRowCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		000333891B27B42F008C973D /* TSQCalendarRowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 000333811B27B42F008C973D /* TSQCalendarRowCell.m */; };
-		0003338A1B27B42F008C973D /* TSQCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 000333821B27B42F008C973D /* TSQCalendarView.h */; };
+		0003338A1B27B42F008C973D /* TSQCalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 000333821B27B42F008C973D /* TSQCalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0003338B1B27B42F008C973D /* TSQCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000333831B27B42F008C973D /* TSQCalendarView.m */; };
 		0003338D1B27B43A008C973D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0003338C1B27B43A008C973D /* UIKit.framework */; };
 		0003338F1B27B44B008C973D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0003338E1B27B44B008C973D /* Foundation.framework */; };
@@ -120,10 +120,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				000333881B27B42F008C973D /* TSQCalendarRowCell.h in Headers */,
-				0036308E1B27B3B5007691A1 /* TimesSquare.h in Headers */,
 				000333841B27B42F008C973D /* TSQCalendarCell.h in Headers */,
 				0003338A1B27B42F008C973D /* TSQCalendarView.h in Headers */,
 				000333861B27B42F008C973D /* TSQCalendarMonthHeaderCell.h in Headers */,
+				0036308E1B27B3B5007691A1 /* TimesSquare.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

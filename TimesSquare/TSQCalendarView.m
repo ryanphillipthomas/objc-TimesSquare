@@ -161,6 +161,7 @@
 - (TSQCalendarMonthHeaderCell *)makeHeaderCellWithIdentifier:(NSString *)identifier;
 {
     TSQCalendarMonthHeaderCell *cell = [[[self headerCellClass] alloc] initWithCalendar:self.calendar reuseIdentifier:identifier];
+    cell.separatorInset = UIEdgeInsetsMake(0.f, [UIScreen mainScreen].bounds.size.width, 0.f, 0.f);
     cell.backgroundColor = self.backgroundColor;
     cell.calendarView = self;
     return cell;
@@ -295,6 +296,8 @@
     
     static NSString *identifier = @"header";
     TSQCalendarMonthHeaderCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.separatorInset = UIEdgeInsetsMake(0.f, [UIScreen mainScreen].bounds.size.width, 0.f, 0.f);
+
     if (!cell) {
         cell = [self makeHeaderCellWithIdentifier:identifier];
         cell.firstOfMonth = [self firstOfMonthForSection:section];

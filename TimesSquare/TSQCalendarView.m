@@ -247,6 +247,8 @@
 {
     static NSString *identifier = @"row";
     TSQCalendarRowCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.separatorInset = UIEdgeInsetsMake(0.f, [UIScreen mainScreen].bounds.size.width, 0.f, 0.f);
+    
     if (!cell) {
         cell = [[[self rowCellClass] alloc] initWithCalendar:self.calendar reuseIdentifier:identifier];
         cell.backgroundColor = self.backgroundColor;

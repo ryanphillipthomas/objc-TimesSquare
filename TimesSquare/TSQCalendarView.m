@@ -60,6 +60,7 @@
     [self addSubview:_tableView];
 }
 
+
 - (void)dealloc;
 {
     _tableView.dataSource = nil;
@@ -205,6 +206,8 @@
 
 - (void)layoutSubviews;
 {
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
     if (self.pinsHeaderToTop) {
         if (!self.headerView) {
             self.headerView = [self makeHeaderCellWithIdentifier:nil];

@@ -47,7 +47,7 @@
 
 - (void)_TSQCalendarView_commonInit;
 {
-    _tableView = [[UITableView alloc] initWithFrame:self.bounds style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc] initWithFrame:self.bounds style:UITableViewStyleGrouped];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -292,7 +292,7 @@
     }
     
     static NSString *identifier = @"header";
-    TSQCalendarMonthHeaderCell *cell = [tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
+    TSQCalendarMonthHeaderCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [self makeHeaderCellWithIdentifier:identifier];
         cell.firstOfMonth = [self firstOfMonthForSection:section];

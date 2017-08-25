@@ -55,10 +55,10 @@
 - (void)configureButton:(UIButton *)button;
 {
     button.titleLabel.font = [self dayOfMonthFont];
-    button.titleLabel.shadowOffset = self.shadowOffset;
+//    button.titleLabel.shadowOffset = self.shadowOffset;
     button.adjustsImageWhenDisabled = NO;
     [button setTitleColor:self.textColor forState:UIControlStateNormal];
-    [button setTitleShadowColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [button setTitleShadowColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
 - (void)createDayButtons;
@@ -100,9 +100,9 @@
     
     [self.todayButton setTitleColor:[self todayTextColor] forState:UIControlStateNormal];
     [self.todayButton setBackgroundImage:[self todayBackgroundImage] forState:UIControlStateNormal];
-    [self.todayButton setTitleShadowColor:[UIColor colorWithWhite:0.0f alpha:0.75f] forState:UIControlStateNormal];
+//    [self.todayButton setTitleShadowColor:[UIColor colorWithWhite:0.0f alpha:0.75f] forState:UIControlStateNormal];
 
-    self.todayButton.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f / [UIScreen mainScreen].scale);
+//    self.todayButton.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f / [UIScreen mainScreen].scale);
 }
 
 - (void)createSelectedButton;
@@ -116,9 +116,9 @@
     self.selectedButton.enabled = NO;
     [self.selectedButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.selectedButton setBackgroundImage:[self selectedBackgroundImage] forState:UIControlStateNormal];
-    [self.selectedButton setTitleShadowColor:[UIColor colorWithWhite:0.0f alpha:0.75f] forState:UIControlStateNormal];
+//    [self.selectedButton setTitleShadowColor:[UIColor colorWithWhite:0.0f alpha:0.75f] forState:UIControlStateNormal];
     
-    self.selectedButton.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f / [UIScreen mainScreen].scale);
+//    self.selectedButton.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f / [UIScreen mainScreen].scale);
     self.indexOfSelectedButton = -1;
 }
 
@@ -184,7 +184,7 @@
 
     _bottomRow = bottomRow;
     
-    self.backgroundView = [[UIImageView alloc] initWithImage:self.backgroundImage];
+    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
     
     [self setNeedsLayout];
 }

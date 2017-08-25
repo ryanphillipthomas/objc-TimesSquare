@@ -71,12 +71,12 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
         NSInteger ordinality = [self.calendar ordinalityOfUnit:NSDayCalendarUnit inUnit:NSWeekCalendarUnit forDate:referenceDate];
         UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
         label.textAlignment = NSTextAlignmentCenter;
-        label.text = [dayFormatter stringFromDate:referenceDate];
+        label.text = [[dayFormatter stringFromDate:referenceDate] uppercaseString];
         label.font = [UIFont boldSystemFontOfSize:12.f];
         label.backgroundColor = self.backgroundColor;
         label.textColor = self.textColor;
-        label.shadowColor = [UIColor whiteColor];
-        label.shadowOffset = self.shadowOffset;
+//        label.shadowColor = [UIColor whiteColor];
+//        label.shadowOffset = self.shadowOffset;
         [label sizeToFit];
         headerLabels[ordinality - 1] = label;
         [self.contentView addSubview:label];
@@ -87,8 +87,8 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
     self.headerLabels = headerLabels;
     self.textLabel.textAlignment = NSTextAlignmentCenter;
     self.textLabel.textColor = self.textColor;
-    self.textLabel.shadowColor = [UIColor whiteColor];
-    self.textLabel.shadowOffset = self.shadowOffset;
+//    self.textLabel.shadowColor = [UIColor whiteColor];
+//    self.textLabel.shadowOffset = self.shadowOffset;
 }
 
 - (void)layoutSubviews;
@@ -113,6 +113,7 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
 {
     [super setFirstOfMonth:firstOfMonth];
     self.textLabel.text = [self.monthDateFormatter stringFromDate:firstOfMonth];
+    self.textLabel.textColor = [UIColor whiteColor];
     self.accessibilityLabel = self.textLabel.text;
 }
 

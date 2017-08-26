@@ -84,6 +84,14 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
         referenceDate = [self.calendar dateByAddingComponents:offset toDate:referenceDate options:0];
     }
     
+    
+    CGRect sizeRect = [UIScreen mainScreen].applicationFrame;
+    NSInteger separatorHeight = 1;
+    UIView *additionalSeparator = [[UIView alloc] initWithFrame:CGRectMake(0,0,sizeRect.size.width,separatorHeight)];
+    additionalSeparator.backgroundColor = [UIColor lightGrayColor];
+    [self.contentView addSubview:additionalSeparator];
+    
+    
     self.headerLabels = headerLabels;
     self.textLabel.textAlignment = NSTextAlignmentCenter;
     self.textLabel.textColor = self.textColor;

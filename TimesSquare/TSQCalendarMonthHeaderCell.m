@@ -88,6 +88,7 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
     CGRect sizeRect = [UIScreen mainScreen].applicationFrame;
     NSInteger separatorHeight = 1;
     UIView *additionalSeparator = [[UIView alloc] initWithFrame:CGRectMake(0,0,sizeRect.size.width,separatorHeight)];
+    additionalSeparator.alpha = 0.3f;
     additionalSeparator.backgroundColor = [UIColor lightGrayColor];
     [self.contentView addSubview:additionalSeparator];
     

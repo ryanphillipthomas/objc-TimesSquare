@@ -10,7 +10,7 @@
 #import "TSQCalendarMonthHeaderCell.h"
 
 
-static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 20.f;
+static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 45.f;
 
 
 @interface TSQCalendarMonthHeaderCell ()

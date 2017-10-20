@@ -156,7 +156,7 @@
 
         NSInteger thisDayMonth = thisDateComponents.month;
         if (self.monthOfBeginningDate != thisDayMonth) {
-            [self.notThisMonthButtons[index] setHidden:NO];
+            [self.notThisMonthButtons[index] setHidden:YES];
         } else {
 
             if ([self.todayDateComponents isEqual:thisDateComponents]) {

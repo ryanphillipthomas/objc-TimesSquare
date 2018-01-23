@@ -20,7 +20,7 @@
 @interface TSQCalendarView : UIView
 
 @property (nonatomic) BOOL isShowingShuttles;
-@property (strong, nonatomic) NSSet *peakDays;
+@property (strong, nonatomic) NSSet *shuttleDays;
 
 /** @name Date Setup */
 

@@ -19,6 +19,9 @@
  */
 @interface TSQCalendarView : UIView
 
+@property (nonatomic) BOOL isShowingShuttles;
+@property (strong, nonatomic) NSSet *peakDays;
+
 /** @name Date Setup */
 
 /** The earliest month the calendar view displays.

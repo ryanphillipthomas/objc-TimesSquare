@@ -148,6 +148,12 @@
     
     _selectedDate = startOfDay;
     
+    if (self.isShowingShuttles) {
+        if (![self.peakDays containsObject:_selectedDate]) {
+            return;
+        }
+    }
+    
     if ([self.delegate respondsToSelector:@selector(calendarView:didSelectDate:)]) {
         [self.delegate calendarView:self didSelectDate:startOfDay];
     }

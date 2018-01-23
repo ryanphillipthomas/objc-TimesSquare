@@ -129,6 +129,12 @@
         return;
     }
     
+    if (self.isShowingShuttles) {
+        if (![self.shuttleDays containsObject:startOfDay]) {
+            return;
+        }
+    }
+    
     [[self cellForRowAtDate:_selectedDate] selectColumnForDate:nil];
     [[self cellForRowAtDate:startOfDay] selectColumnForDate:startOfDay];
     NSIndexPath *newIndexPath = [self indexPathForRowAtDate:startOfDay];
@@ -147,12 +153,6 @@
     }
     
     _selectedDate = startOfDay;
-    
-    if (self.isShowingShuttles) {
-        if (![self.peakDays containsObject:_selectedDate]) {
-            return;
-        }
-    }
     
     if ([self.delegate respondsToSelector:@selector(calendarView:didSelectDate:)]) {
         [self.delegate calendarView:self didSelectDate:startOfDay];

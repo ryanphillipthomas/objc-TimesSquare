@@ -68,6 +68,7 @@
         [dayButtons addObject:button];
         [self.contentView addSubview:button];
         [self configureButton:button];
+        button.accessibilityIdentifier = @"calendar_day_button";
         [button setTitleColor:[self.textColor colorWithAlphaComponent:0.5f] forState:UIControlStateDisabled];
     }
     self.dayButtons = dayButtons;
@@ -85,6 +86,7 @@
         button.enabled = NO;
         UIColor *backgroundPattern = [UIColor colorWithPatternImage:[self notThisMonthBackgroundImage]];
         button.backgroundColor = backgroundPattern;
+        button.accessibilityIdentifier = @"calendar_past_day";
     }
     self.notThisMonthButtons = notThisMonthButtons;
 }
@@ -112,7 +114,7 @@
     self.selectedButton.enabled = NO;
     [self.selectedButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.selectedButton setBackgroundImage:[self selectedBackgroundImage] forState:UIControlStateNormal];
-    self.selectedButton.accessibilityIdentifier = @"calendar_blue_circle_day";
+    self.selectedButton.accessibilityIdentifier = @"calendar_circle_day";
     self.indexOfSelectedButton = -1;
 }
 

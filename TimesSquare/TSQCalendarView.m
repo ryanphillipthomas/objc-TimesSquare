@@ -311,6 +311,7 @@
         cell = [self makeHeaderCellWithIdentifier:identifier];
         cell.firstOfMonth = [self firstOfMonthForSection:section];
     }
+    cell.textLabel.accessibilityIdentifier = @"calendar_month_label";
     return cell;
 }
 

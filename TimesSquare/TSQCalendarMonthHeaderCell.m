@@ -75,8 +75,6 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 45.f;
         label.font = [UIFont fontWithName:@"Rubik-Light" size:16];
         label.backgroundColor = self.backgroundColor;
         label.textColor = self.textColor;
-//        label.shadowColor = [UIColor whiteColor];
-//        label.shadowOffset = self.shadowOffset;
         [label sizeToFit];
         headerLabels[ordinality - 1] = label;
         [self.contentView addSubview:label];
@@ -96,8 +94,6 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 45.f;
     self.headerLabels = headerLabels;
     self.textLabel.textAlignment = NSTextAlignmentCenter;
     self.textLabel.textColor = self.textColor;
-//    self.textLabel.shadowColor = [UIColor whiteColor];
-//    self.textLabel.shadowOffset = self.shadowOffset;
 }
 
 - (void)layoutSubviews;

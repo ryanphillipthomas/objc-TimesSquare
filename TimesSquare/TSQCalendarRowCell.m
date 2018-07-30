@@ -86,7 +86,6 @@
         button.enabled = NO;
         UIColor *backgroundPattern = [UIColor colorWithPatternImage:[self notThisMonthBackgroundImage]];
         button.backgroundColor = backgroundPattern;
-        button.accessibilityIdentifier = @"calendar_past_day";
     }
     self.notThisMonthButtons = notThisMonthButtons;
 }
@@ -114,7 +113,6 @@
     self.selectedButton.enabled = NO;
     [self.selectedButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [self.selectedButton setBackgroundImage:[self selectedBackgroundImage] forState:UIControlStateNormal];
-    self.selectedButton.accessibilityIdentifier = @"calendar_circle_day";
     self.indexOfSelectedButton = -1;
 }
 

@@ -68,7 +68,6 @@
         [dayButtons addObject:button];
         [self.contentView addSubview:button];
         [self configureButton:button];
-        button.accessibilityIdentifier = @"calendar_day_button";
         [button setTitleColor:[self.textColor colorWithAlphaComponent:0.5f] forState:UIControlStateDisabled];
     }
     self.dayButtons = dayButtons;

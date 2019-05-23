@@ -19,6 +19,9 @@
  */
 @interface TSQCalendarView : UIView
 
+@property (nonatomic, strong) UIColor *headerCellTextColor;
+@property (nonatomic, strong) UIColor *rowCellTextColor;
+
 @property (nonatomic) BOOL isShowingShuttles;
 @property (strong, nonatomic) NSSet *shuttleDays;
 

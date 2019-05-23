@@ -170,6 +170,7 @@
     TSQCalendarMonthHeaderCell *cell = [[[self headerCellClass] alloc] initWithCalendar:self.calendar reuseIdentifier:identifier];
     cell.separatorInset = UIEdgeInsetsMake(0.f, [UIScreen mainScreen].bounds.size.width, 0.f, 0.f);
     cell.backgroundColor = self.backgroundColor;
+    cell.textColor = _headerCellTextColor;
     cell.calendarView = self;
     return cell;
 }
@@ -263,6 +264,7 @@
         cell = [[[self rowCellClass] alloc] initWithCalendar:self.calendar reuseIdentifier:identifier];
         cell.backgroundColor = self.backgroundColor;
         cell.calendarView = self;
+        cell.textColor = _rowCellTextColor;
     }
     return cell;
 }

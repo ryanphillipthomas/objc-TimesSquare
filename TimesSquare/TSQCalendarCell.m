@@ -40,7 +40,7 @@
     });
     self.shadowOffset = shadowOffset;
     self.columnSpacing = onePixel;
-    self.textColor = [UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:0.20];
+    self.textColor = [UIColor colorWithRed:0.459 green:0.459 blue:0.459 alpha:1.00];
 
     return self;
 }

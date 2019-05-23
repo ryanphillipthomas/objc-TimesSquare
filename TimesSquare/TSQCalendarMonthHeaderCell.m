@@ -72,7 +72,7 @@ static const CGFloat TSQCalendarMonthHeaderCellMonthsHeight = 45.f;
         UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
         label.textAlignment = NSTextAlignmentCenter;
         label.text = [[dayFormatter stringFromDate:referenceDate] uppercaseString];
-        label.font = [UIFont fontWithName:@"Rubik-Light" size:16];
+        label.font = [UIFont fontWithName:@"Rubik-Medium" size:13];
         label.backgroundColor = self.backgroundColor;
         label.textColor = self.textColor;
         [label sizeToFit];

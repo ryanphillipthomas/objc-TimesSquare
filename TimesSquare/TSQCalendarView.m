@@ -161,8 +161,12 @@
 
 - (void)scrollToDate:(NSDate *)date animated:(BOOL)animated
 {
-  NSInteger section = [self sectionForDate:date];
-  [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section] atScrollPosition:UITableViewScrollPositionTop animated:animated];
+    if (date != nil) {
+        NSInteger section = [self sectionForDate:date];
+        if ([self.tableView numberOfSections] >= section) {
+            [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:section] atScrollPosition:UITableViewScrollPositionTop animated:animated];
+        }
+    }
 }
 
 - (TSQCalendarMonthHeaderCell *)makeHeaderCellWithIdentifier:(NSString *)identifier;
